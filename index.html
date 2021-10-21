@@ -3,14 +3,18 @@
     <head>
         <title>Stupid live broadcasting app</title>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="js/jsUtilOne.js"></script>
     </head>
     <body>
         <h1 id="hTheBroadcast"></h1>
 
         <script>
-            var i=1;
             setInterval(function(){
-                $('#hTheBroadcast').html('Hello world! ' + (i++));
+                readTextFile("json/first.json", function(text){
+                    var data = JSON.parse(text);
+                    console.log(data);
+                    $('#hTheBroadcast').html(data.textToDisplay);
+                });
             }, 1000)
         </script>
     </body>
