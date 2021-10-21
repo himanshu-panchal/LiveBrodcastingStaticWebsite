@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Stupid live broadcasting app</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <h1 id="hTheBroadcast"></h1>
+
+        <script>
+            var i=1;
+            setInterval(function(){
+                $('#hTheBroadcast').html('Hello world! ' + (i++));
+            }, 1000)
+        </script>
+    </body>
+</html>
